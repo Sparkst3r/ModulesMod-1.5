@@ -169,17 +169,17 @@ public static Item InfusionChamber;
 		InfuserActive = new Infuser(1012, true).setHardness(3.5F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("Infuser_Active");		
 
 		//items
-		ImpureTinIngot = (new ImpureTinIngot(ImpureTinIngotId));
-		ImpureCopperIngot = (new ImpureCopperIngot(ImpureCopperIngotId));
-		ImpureSilverIngot = (new ImpureSilverIngot(ImpureSilverIngotId));
-		ImpureLeadIngot = (new ImpureLeadIngot(ImpureLeadIngotId));
-		ImpureTitaniumIngot = (new ImpureTitaniumIngot(ImpureTitaniumIngotId));
+		ImpureTinIngot = new ImpureTinIngot(ImpureTinIngotId);
+		ImpureCopperIngot = new ImpureCopperIngot(ImpureCopperIngotId);
+		ImpureSilverIngot = new ImpureSilverIngot(ImpureSilverIngotId);
+		ImpureLeadIngot = new ImpureLeadIngot(ImpureLeadIngotId);
+		ImpureTitaniumIngot = new ImpureTitaniumIngot(ImpureTitaniumIngotId);
 		
-		TitaniumIngot = (new ItemIngot(TitaniumIngotId).setUnlocalizedName("TitaniumIngot").setCreativeTab(Modules1));
-		CopperIngot = (new ItemIngot(CopperIngotId).setUnlocalizedName("CopperIngot").setCreativeTab(Modules1));
-		TinIngot = (new ItemIngot(TinIngotId).setUnlocalizedName("TinIngot").setCreativeTab(Modules1));
-		SilverIngot = (new ItemIngot(SilverIngotId).setUnlocalizedName("SilverIngot").setCreativeTab(Modules1));
-		LeadIngot = (new ItemIngot(LeadIngotId).setUnlocalizedName("LeadIngot").setCreativeTab(Modules1));
+		TitaniumIngot = new ItemIngot(TitaniumIngotId);
+		CopperIngot = new ItemIngot(CopperIngotId);
+		TinIngot = new ItemIngot(TinIngotId);
+		SilverIngot = new ItemIngot(SilverIngotId);
+		LeadIngot = new ItemIngot(LeadIngotId);
 
 		EmptyPowerCell = (new PowerCellEmpty(EmptyPowerCellId).setUnlocalizedName("EPowerCell").setCreativeTab(Modules1));
 		PowerCell = (new PowerCell(PowerCellId).setUnlocalizedName("PowerCell").setCreativeTab(Modules1));
@@ -233,6 +233,7 @@ public static Item InfusionChamber;
 	
 	public void RegItems(){
 		GameRegistry.registerItem(TinIngot, "ingotTin");
+		GameRegistry.registerItem(CopperIngot, "ingotCopper");
 	}
 	public void Smelting(){
 		GameRegistry.addSmelting(OreCopper.blockID, new ItemStack(ImpureCopperIngot), 0.1F);
