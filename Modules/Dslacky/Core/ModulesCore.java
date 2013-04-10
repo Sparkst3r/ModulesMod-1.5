@@ -20,6 +20,7 @@ import Modules.Dslacky.Core.Items.ExtraItem;
 import Modules.Dslacky.Core.Items.PowerCell;
 import Modules.Dslacky.Core.Items.PowerCellEmpty;
 import Modules.Dslacky.Core.Items.*;
+import Modules.Dslacky.Core.Items.ItemIngot;
 import Modules.Dslacky.Core.Render.CommonProxy;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.Init;
@@ -155,25 +156,25 @@ public static Item InfusionChamber;
 	@Init 
 	public void load(FMLInitializationEvent fie){
         //blocks
-		OreTin = (new TinOre(OreTinId, Material.iron)).setHardness(3.0F).setResistance(10.0F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("Tin_Ore").setCreativeTab(Modules1);
-		OreCopper = (new CopperOre(OreCopperId, Material.iron)).setHardness(3.0F).setResistance(10.0F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("Copper_Ore").setCreativeTab(Modules1);
-		OreSilver = (new SilverOre(OreSilverId, Material.iron)).setHardness(3.0F).setResistance(10.0F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("Silver_Ore").setCreativeTab(Modules1);
-		OreLead = (new LeadOre(OreLeadId, Material.iron)).setHardness(3.0F).setResistance(10.0F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("Lead_Ore").setCreativeTab(Modules1);
-		OreElectrode = (new ElectrodeOre(OreElectrodeId, Material.iron)).setHardness(3.0F).setResistance(10.0F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("Electrode_Ore").setCreativeTab(Modules1);
-		OreTitanium = (new TitaniumOre(OreTitaniumId, Material.iron)).setHardness(50.0F).setResistance(900.0F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("Titanium_Ore").setCreativeTab(Modules1);
-		BlockTitanium = (new TitaniumBlock(BlockTitaniumId,Material.iron)).setHardness(50.0F).setResistance(900.0F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("Titanium_Block").setCreativeTab(Modules1);
+		OreTin = (new TinOre(OreTinId, Material.iron)).setHardness(3.0F).setResistance(10.0F).setStepSound(Block.soundStoneFootstep);
+		OreCopper = (new CopperOre(OreCopperId, Material.iron)).setHardness(3.0F).setResistance(10.0F).setStepSound(Block.soundStoneFootstep);
+		OreSilver = (new SilverOre(OreSilverId, Material.iron)).setHardness(3.0F).setResistance(10.0F).setStepSound(Block.soundStoneFootstep);
+		OreLead = (new LeadOre(OreLeadId, Material.iron)).setHardness(3.0F).setResistance(10.0F).setStepSound(Block.soundStoneFootstep);
+		OreElectrode = (new ElectrodeOre(OreElectrodeId, Material.iron)).setHardness(3.0F).setResistance(10.0F).setStepSound(Block.soundStoneFootstep);
+		OreTitanium = (new TitaniumOre(OreTitaniumId, Material.iron)).setHardness(50.0F).setResistance(900.0F).setStepSound(Block.soundStoneFootstep);
+		BlockTitanium = (new TitaniumBlock(BlockTitaniumId,Material.iron)).setHardness(50.0F).setResistance(900.0F).setStepSound(Block.soundStoneFootstep);
 
-		RefineryIdle = new Refinery(1009, false).setHardness(3.5F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("Refinery_Idle").setCreativeTab(Modules.Dslacky.Core.ModulesCore.Modules1);
-		RefineryActive = new Refinery(1010, true).setHardness(3.5F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("Refinery_Active");		
-		InfuserIdle = new Infuser(1011, false).setHardness(3.5F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("Infuser_Idle").setCreativeTab(Modules.Dslacky.Core.ModulesCore.Modules1);
-		InfuserActive = new Infuser(1012, true).setHardness(3.5F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("Infuser_Active");		
+		RefineryIdle = new Refinery(1009, false).setHardness(3.5F).setStepSound(Block.soundStoneFootstep);
+		RefineryActive = new Refinery(1010, true).setHardness(3.5F).setStepSound(Block.soundStoneFootstep);		
+		InfuserIdle = new Infuser(1011, false).setHardness(3.5F).setStepSound(Block.soundStoneFootstep);
+		InfuserActive = new Infuser(1012, true).setHardness(3.5F).setStepSound(Block.soundStoneFootstep);		
 
 		//items
-		ImpureTinIngot = new ImpureTinIngot(ImpureTinIngotId);
-		ImpureCopperIngot = new ImpureCopperIngot(ImpureCopperIngotId);
-		ImpureSilverIngot = new ImpureSilverIngot(ImpureSilverIngotId);
-		ImpureLeadIngot = new ImpureLeadIngot(ImpureLeadIngotId);
-		ImpureTitaniumIngot = new ImpureTitaniumIngot(ImpureTitaniumIngotId);
+		//ImpureTinIngot = new ImpureTinIngot(ImpureTinIngotId);
+		//ImpureCopperIngot = new ImpureCopperIngot(ImpureCopperIngotId);
+		//ImpureSilverIngot = new ImpureSilverIngot(ImpureSilverIngotId);
+		//ImpureLeadIngot = new ImpureLeadIngot(ImpureLeadIngotId);
+		//ImpureTitaniumIngot = new ImpureTitaniumIngot(ImpureTitaniumIngotId);
 		
 		TitaniumIngot = new ItemIngot(TitaniumIngotId);
 		CopperIngot = new ItemIngot(CopperIngotId);
@@ -181,16 +182,18 @@ public static Item InfusionChamber;
 		SilverIngot = new ItemIngot(SilverIngotId);
 		LeadIngot = new ItemIngot(LeadIngotId);
 
-		EmptyPowerCell = (new PowerCellEmpty(EmptyPowerCellId).setUnlocalizedName("EPowerCell").setCreativeTab(Modules1));
-		PowerCell = (new PowerCell(PowerCellId).setUnlocalizedName("PowerCell").setCreativeTab(Modules1));
-
-		UnrefinedElectrodes = (new PowerCell(UnrefinedElectrodesId).setUnlocalizedName("UnrefinedElectrode").setCreativeTab(Modules1));	
-		Electrode = (new PowerCell(ElectrodeId).setUnlocalizedName("Electrode").setCreativeTab(Modules1));	
-		Filter = (new ExtraItem(FilterId).setUnlocalizedName("Filter").setCreativeTab(Modules1));	
-		IronPlating = (new ExtraItem(IronPlatingId).setUnlocalizedName("Iron Plating").setCreativeTab(Modules1));	
-		StabilisingRod = (new ExtraItem(StabilisingRodId).setUnlocalizedName("Stabilising Rod").setCreativeTab(Modules1));	
-		FilterSheet = (new ExtraItem(FilterSheetId).setUnlocalizedName("Filter Sheet").setCreativeTab(Modules1));
-		InfusionChamber = (new ExtraItem(InfusionChamberId).setUnlocalizedName("Infusion Chamber").setCreativeTab(Modules1));
+		EmptyPowerCell = new PowerCellEmpty(EmptyPowerCellId);
+		PowerCell = new PowerCellEmpty(PowerCellId);
+		
+		UnrefinedElectrodes = new PowerCell(UnrefinedElectrodesId);	
+		Electrode = new PowerCell(ElectrodeId);	
+		Filter = new ExtraItem(FilterId);	
+		IronPlating = new ExtraItem(IronPlatingId);	
+		StabilisingRod = new ExtraItem(StabilisingRodId);	
+		FilterSheet = new ExtraItem(FilterSheetId);
+		InfusionChamber = new ExtraItem(InfusionChamberId);
+		
+		
 		NetworkRegistry.instance().registerGuiHandler(this, guiHandler);
 		GameRegistry.registerTileEntity(TileEntityRefinery.class,"tileEntityRefinery");				
 		GameRegistry.registerBlock(RefineryIdle, "RefineryIdle");
@@ -207,6 +210,8 @@ public static Item InfusionChamber;
 		Smelting();
 		langage();
 		OreDictionary();
+		
+		
 		
 		proxy.registerRender();}
 	public void RegBlocks(){
@@ -232,9 +237,14 @@ public static Item InfusionChamber;
 	    GameRegistry.addRecipe(new ItemStack(InfuserIdle, 1), new Object[] {"FBF","BUB","FBF",Character.valueOf('B'), Modules.Dslacky.Core.ModulesCore.StabilisingRod,Character.valueOf('U'), Modules.Dslacky.Core.ModulesCore.InfusionChamber,Character.valueOf('F'), Modules.Dslacky.Core.ModulesCore.IronPlating});}    
 	
 	public void RegItems(){
-		GameRegistry.registerItem(TinIngot, "ingotTin");
-		GameRegistry.registerItem(CopperIngot, "ingotCopper");
+		GameRegistry.registerItem(CopperIngot, "Copper Ingot",  ModulesCore.modid);
 	}
+ 
+    
+	//public void RegStacks(){
+	//	ItemStack blackWoolStack = new ItemStack(ItemIngot, 42, 15);
+	//}
+	
 	public void Smelting(){
 		GameRegistry.addSmelting(OreCopper.blockID, new ItemStack(ImpureCopperIngot), 0.1F);
 		GameRegistry.addSmelting(OreSilver.blockID, new ItemStack(ImpureSilverIngot), 0.3F);

@@ -20,8 +20,9 @@ import net.minecraft.util.Icon;
 /**
  * Meta-data item for the 4 ingots.
  * 
- * @author Brendan
+ * @author Brendanp123
  * @author Sparkst3r
+ *
  */
 public class ItemIngot extends Item {
 	/** Texture file names + code name */
@@ -45,6 +46,7 @@ public class ItemIngot extends Item {
 		this.setMaxDamage(0);
 		GameRegistry.registerItem(this, "ingots");
 	}
+
 
 	/** Returns the texture based on the damage value */
 	@SideOnly(Side.CLIENT)

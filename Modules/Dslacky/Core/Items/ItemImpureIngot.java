@@ -20,16 +20,15 @@ import net.minecraft.util.Icon;
 /**
  * Meta-data item for the 4 ingots.
  * 
- * @author BrendanP123
  * @author Sparkst3r
  *
  */
-public class ExtraItem extends Item {
+public class ItemImpureIngot extends Item {
 	/** Texture file names + code name */
-    public static String[] types = new String[] {"filter", "ironPlating", "stabilisingRod", "filterSheet", "infusionChamber"};     
+    public static String[] types = new String[] {"ImpureIngotCopper", "ImpureIngotTin", "ImpureIngotSilver", "ImpureIngotLead", "ImpureIngotTitanium"};     
     
     /** Human-Readable names */
-    public static String[] names = new String[] {"Filter", "Iron Plating", "Stabilising Rod", "Filter Sheet", "Infusion Chamber"};
+    public static String[] names = new String[] {"Impure Copper Ingot", "Impure Tin Ingot", "Impure Silver Ingot", "Impure Lead Ingot", "Impure Titanium Ingot"};
     
     /** Icon Array */
     @SideOnly(Side.CLIENT)
@@ -39,12 +38,12 @@ public class ExtraItem extends Item {
      * Constructor
      * @param id Item ID
      */
-	public ExtraItem(int id) {
+	public ItemImpureIngot(int id) {
 		super(id);
         this.setCreativeTab(CreativeTabs.tabMisc);
 		this.setHasSubtypes(true);
 		this.setMaxDamage(0);
-		GameRegistry.registerItem(this, "extraItem");
+		GameRegistry.registerItem(this, "ImpureIngots");
 	}
 
 

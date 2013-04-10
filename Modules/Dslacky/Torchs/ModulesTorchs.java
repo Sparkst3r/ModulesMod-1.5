@@ -1,3 +1,4 @@
+/*
 package Modules.Dslacky.Torchs;
 
 import net.minecraft.block.Block;
@@ -125,3 +126,4 @@ public static Item InfusedBlueCoal;
 	public void OreDictionary(){
 	}
 }
+*/
