@@ -20,8 +20,8 @@ import net.minecraft.util.Icon;
 /**
  * Meta-data item for the 4 ingots.
  * 
- * @author Brendan < But thanks to Sparkky :)
- *
+ * @author Brendan
+ * @author Sparkst3r
  */
 public class ItemIngot extends Item {
 	/** Texture file names + code name */
