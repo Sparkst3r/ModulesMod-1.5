@@ -20,7 +20,7 @@ import net.minecraft.util.Icon;
 /**
  * Meta-data item for the 4 ingots.
  * 
- * @author Sparkst3r
+ * @author Brendan < But thanks to Sparkky :)
  *
  */
 public class ItemIngot extends Item {
