@@ -114,7 +114,7 @@ public static Item InfusionChamber;
 	public static Block InfuserActive;
 	
 	public static final String mainDir = "/mods/ModulesCore/textures/";
-	public static final String guiDir = mainDir + "guis/";
+	public static final String guiDir = mainDir + "gui/";
 	public static final String entityDir = mainDir + "entities/";
 	public static final String blockDir = mainDir + "blocks/";
 	public static final String itemDir = mainDir + "items/";
@@ -170,11 +170,11 @@ public static Item InfusionChamber;
 		InfuserActive = new Infuser(1012, true).setHardness(3.5F).setStepSound(Block.soundStoneFootstep);		
 
 		//items
-		//ImpureTinIngot = new ImpureTinIngot(ImpureTinIngotId);
-		//ImpureCopperIngot = new ImpureCopperIngot(ImpureCopperIngotId);
-		//ImpureSilverIngot = new ImpureSilverIngot(ImpureSilverIngotId);
-		//ImpureLeadIngot = new ImpureLeadIngot(ImpureLeadIngotId);
-		//ImpureTitaniumIngot = new ImpureTitaniumIngot(ImpureTitaniumIngotId);
+		ImpureTinIngot = new ItemImpureIngot(ImpureTinIngotId);
+		ImpureCopperIngot = new ItemImpureIngot(ImpureCopperIngotId);
+	    ImpureSilverIngot = new ItemImpureIngot(ImpureSilverIngotId);
+		ImpureLeadIngot = new ItemImpureIngot(ImpureLeadIngotId);
+		ImpureTitaniumIngot = new ItemImpureIngot(ImpureTitaniumIngotId);
 		
 		TitaniumIngot = new ItemIngot(TitaniumIngotId);
 		CopperIngot = new ItemIngot(CopperIngotId);
@@ -208,12 +208,10 @@ public static Item InfusionChamber;
 		GenWorld();
 		Recipes();
 		Smelting();
-		langage();
+		Language();
 		OreDictionary();
-		
-		
-		
-		proxy.registerRender();}
+        proxy.registerRender();}
+	
 	public void RegBlocks(){
 		GameRegistry.registerBlock(OreElectrode ,"Electrode Ore");
 		GameRegistry.registerBlock(OreCopper ,"Copper Ore");	
@@ -221,9 +219,13 @@ public static Item InfusionChamber;
 		GameRegistry.registerBlock(OreSilver ,"Silver Ore");	
 		GameRegistry.registerBlock(OreLead ,"Lead Ore");
 		GameRegistry.registerBlock(OreTitanium ,"Titanium Ore");
-		GameRegistry.registerBlock(BlockTitanium ,"Block Of Titanium");}
+		GameRegistry.registerBlock(BlockTitanium ,"Block Of Titanium");
+		}
+	
 	public void GenWorld(){
-		GameRegistry.registerWorldGenerator(new WorldGen());}
+		GameRegistry.registerWorldGenerator(new WorldGen());
+		}
+	
 	public void Recipes(){
 		GameRegistry.addRecipe(new ItemStack(EmptyPowerCell, 1), new Object[] {" B ","XBX"," X ",Character.valueOf('B'), Item.redstone,Character.valueOf('X'), Item.ingotIron,Character.valueOf('B'), Item.ingotGold});
 		GameRegistry.addRecipe(new ItemStack(Filter, 1), new Object[] {"XXX","XBX","XXX",Character.valueOf('B'), FilterSheet,Character.valueOf('X'), Item.silk});
@@ -234,16 +236,8 @@ public static Item InfusionChamber;
         GameRegistry.addRecipe(new ItemStack(PowerCell, 1), new Object[] {"X  ","O  ","   ",Character.valueOf('X'), Electrode, Character.valueOf('O'), EmptyPowerCell});
         GameRegistry.addRecipe(new ItemStack(InfusionChamber, 1), new Object[] {"XBX","B B","XBX",Character.valueOf('X'), IronPlating, Character.valueOf('B'), StabilisingRod});
         GameRegistry.addRecipe(new ItemStack(RefineryIdle, 1), new Object[] {"XXX","BUB","FFF",Character.valueOf('X'), Block.stone,Character.valueOf('B'), Modules.Dslacky.Core.ModulesCore.StabilisingRod,Character.valueOf('U'), Modules.Dslacky.Core.ModulesCore.Filter,Character.valueOf('F'), Modules.Dslacky.Core.ModulesCore.IronPlating});
-	    GameRegistry.addRecipe(new ItemStack(InfuserIdle, 1), new Object[] {"FBF","BUB","FBF",Character.valueOf('B'), Modules.Dslacky.Core.ModulesCore.StabilisingRod,Character.valueOf('U'), Modules.Dslacky.Core.ModulesCore.InfusionChamber,Character.valueOf('F'), Modules.Dslacky.Core.ModulesCore.IronPlating});}    
-	
-	public void RegItems(){
-		GameRegistry.registerItem(CopperIngot, "Copper Ingot",  ModulesCore.modid);
-	}
- 
-    
-	//public void RegStacks(){
-	//	ItemStack blackWoolStack = new ItemStack(ItemIngot, 42, 15);
-	//}
+	    GameRegistry.addRecipe(new ItemStack(InfuserIdle, 1), new Object[] {"FBF","BUB","FBF",Character.valueOf('B'), Modules.Dslacky.Core.ModulesCore.StabilisingRod,Character.valueOf('U'), Modules.Dslacky.Core.ModulesCore.InfusionChamber,Character.valueOf('F'), Modules.Dslacky.Core.ModulesCore.IronPlating});
+	    }
 	
 	public void Smelting(){
 		GameRegistry.addSmelting(OreCopper.blockID, new ItemStack(ImpureCopperIngot), 0.1F);
@@ -251,7 +245,7 @@ public static Item InfusionChamber;
 		GameRegistry.addSmelting(OreTin.blockID, new ItemStack(ImpureTinIngot), 0.2F);
 		GameRegistry.addSmelting(OreLead.blockID, new ItemStack(ImpureLeadIngot), 0.2F);
 		GameRegistry.addSmelting(OreTitanium.blockID, new ItemStack(ImpureTitaniumIngot), 1.0F);}
-	public void langage(){
+	public void Language(){
 			LanguageRegistry.addName(OreElectrode, "Electrode Ore");
 			LanguageRegistry.addName(OreCopper, "Copper Ore");
 			LanguageRegistry.addName(OreTin, "Tin Ore");
@@ -259,26 +253,6 @@ public static Item InfusionChamber;
 			LanguageRegistry.addName(OreLead, "Lead Ore");
 		    LanguageRegistry.addName(OreTitanium, "Titanium Ore");
 	        LanguageRegistry.addName(BlockTitanium, "Titanium Block");
-
-	        LanguageRegistry.addName(ImpureTinIngot,"Impure Tin Ingot");
-	        LanguageRegistry.addName(ImpureCopperIngot,"Impure Copper Ingot");
-	        LanguageRegistry.addName(ImpureSilverIngot,"Impure Silver Ingot");
-	        LanguageRegistry.addName(ImpureLeadIngot,"Impure Lead Ingot");
-	        LanguageRegistry.addName(ImpureTitaniumIngot,"Impure Titanium Ingot");
-	        LanguageRegistry.addName(TitaniumIngot,"Titanium Ingot");
-	        LanguageRegistry.addName(CopperIngot,"Copper Ingot");
-	        LanguageRegistry.addName(TinIngot,"Tin Ingot");
-	        LanguageRegistry.addName(SilverIngot,"Silver Ingot");
-	        LanguageRegistry.addName(LeadIngot,"Lead Ingot");
-	        LanguageRegistry.addName(EmptyPowerCell,"Empty Power Cell");
-	        LanguageRegistry.addName(PowerCell,"Power Cell");
-	        LanguageRegistry.addName(UnrefinedElectrodes,"Unrefined Electrodes");
-	        LanguageRegistry.addName(Electrode,"Electrode");
-	        LanguageRegistry.addName(Filter,"Filter");
-	        LanguageRegistry.addName(IronPlating,"Metal Plating");
-	        LanguageRegistry.addName(StabilisingRod,"Stabilising Rod");
-	        LanguageRegistry.addName(FilterSheet,"Filter Sheet");
-	        LanguageRegistry.addName(InfusionChamber, "Infusion Chamber");
 }
 
 	public void OreDictionary(){

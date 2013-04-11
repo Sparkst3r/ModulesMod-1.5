@@ -43,7 +43,6 @@ public class ItemImpureIngot extends Item {
         this.setCreativeTab(CreativeTabs.tabMisc);
 		this.setHasSubtypes(true);
 		this.setMaxDamage(0);
-		GameRegistry.registerItem(this, "ImpureIngots");
 	}
 
 
@@ -71,15 +70,13 @@ public class ItemImpureIngot extends Item {
 	/** Adds the meta items to the tab */
 	@Override
 	public void getSubItems(int id, CreativeTabs tab, List list) {
-		for (int meta = 0; meta < 5; meta++) {
-			list.add(new ItemStack(id, 1, meta));
+		for (int meta = 0; meta < 4; meta++) {
+			list.add(new ItemStack(id, 0, meta));
 		}
 	} 
-
-	/** Returns the unlocalised name of the block*/
-	@Override
-	public String getUnlocalizedName(ItemStack is) {
-		return types[is.getItemDamage()];
-	}
+    
+    public String getItemNameIS(ItemStack stack){
+            return names[stack.getItemDamage()]; // Names is a string[] that will be covered later in this tutorial, if you wan to just return a specific name continue.
+    }
 
 }

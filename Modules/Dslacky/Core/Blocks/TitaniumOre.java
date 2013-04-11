@@ -16,7 +16,7 @@ public class TitaniumOre extends Block{
 		setCreativeTab(CreativeTabs.tabBlock);
 		setHardness(2.0F);
 		setResistance(3.0F);
-		setUnlocalizedName("TitaniumOre");
+		setUnlocalizedName("titaniumOre");
 	}
 	public void registerIcons(IconRegister par1IconRegister)
     {

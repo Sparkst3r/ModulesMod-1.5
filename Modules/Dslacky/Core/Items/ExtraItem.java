@@ -4,8 +4,10 @@ package Modules.Dslacky.Core.Items;
 import java.util.List;
 
 import Modules.Dslacky.Core.ModulesCore;
+import Modules.Dslacky.Core.Extra.RegistryUtils;
 
 import cpw.mods.fml.common.registry.GameRegistry;
+import cpw.mods.fml.common.registry.LanguageRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -34,7 +36,6 @@ public class ExtraItem extends Item {
     /** Icon Array */
     @SideOnly(Side.CLIENT)
     private Icon[] iconBuffer;
-
     /**
      * Constructor
      * @param id Item ID
@@ -44,9 +45,8 @@ public class ExtraItem extends Item {
         this.setCreativeTab(CreativeTabs.tabMisc);
 		this.setHasSubtypes(true);
 		this.setMaxDamage(0);
-		GameRegistry.registerItem(this, "extraItem");
-	}
-
+		}
+	
 
 	/** Returns the texture based on the damage value */
 	@SideOnly(Side.CLIENT)
@@ -68,6 +68,7 @@ public class ExtraItem extends Item {
 		iconBuffer[3] = ir.registerIcon(id + types[3]);
 		iconBuffer[4] = ir.registerIcon(id + types[4]);
 	}
+	
     
 	/** Adds the meta items to the tab */
 	@Override

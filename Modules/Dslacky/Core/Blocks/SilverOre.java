@@ -16,7 +16,7 @@ public class SilverOre extends Block{
 		setCreativeTab(CreativeTabs.tabBlock);
 		setHardness(2.0F);
 		setResistance(3.0F);
-		setUnlocalizedName("SilverOre");
+		setUnlocalizedName("silverOre");
 	}
 	public void registerIcons(IconRegister par1IconRegister)
     {

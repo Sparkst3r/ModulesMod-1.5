@@ -16,7 +16,7 @@ public class LeadOre extends Block{
 		setCreativeTab(CreativeTabs.tabBlock);
 		setHardness(2.0F);
 		setResistance(3.0F);
-		setUnlocalizedName("LeadOre");
+		setUnlocalizedName("leadOre");
 	}
 	
 	public void registerIcons(IconRegister par1IconRegister)

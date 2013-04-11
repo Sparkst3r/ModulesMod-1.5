@@ -16,7 +16,7 @@ public class TinOre extends Block{
 		setCreativeTab(CreativeTabs.tabBlock);
 		setHardness(2.0F);
 		setResistance(3.0F);
-		setUnlocalizedName("TinOre");
+		setUnlocalizedName("tinOre");
 	}
 	public void registerIcons(IconRegister par1IconRegister)
     {

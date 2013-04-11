@@ -44,7 +44,6 @@ public class PowerCellEmpty extends Item {
         this.setCreativeTab(CreativeTabs.tabMisc);
 		this.setHasSubtypes(true);
 		this.setMaxDamage(0);
-		GameRegistry.registerItem(this, "powerCell");
 	}
 
 

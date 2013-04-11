@@ -16,11 +16,11 @@ public class CopperOre extends Block{
 		setCreativeTab(CreativeTabs.tabBlock);
 		setHardness(2.0F);
 		setResistance(3.0F);
-		setUnlocalizedName("CopperOre");
+		setUnlocalizedName("copperOre");
 	}
 	
 	public void registerIcons(IconRegister par1IconRegister)
     {
-        this.blockIcon = par1IconRegister.registerIcon(ModulesCore.modid + ":" + this.getUnlocalizedName());
+        this.blockIcon = par1IconRegister.registerIcon(ModulesCore.modid + "copperOre");
     }
 }

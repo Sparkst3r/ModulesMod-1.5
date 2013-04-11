@@ -43,7 +43,6 @@ public class InfusedCoal extends Item {
         this.setCreativeTab(CreativeTabs.tabMisc);
 		this.setHasSubtypes(true);
 		this.setMaxDamage(0);
-		GameRegistry.registerItem(this, "ingots");
 	}
 
 	/** Returns the texture based on the damage value */

@@ -6,6 +6,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IconRegister;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
@@ -44,6 +45,8 @@ public class Infuser extends BlockContainer {
 	public Infuser(int par1, boolean par2) {
 		super(par1, Material.rock);
 		this.isActive = par2;
+		this.setCreativeTab(CreativeTabs.tabMisc);
+		this.setUnlocalizedName("Testing");
 	}
 
 
@@ -89,10 +92,9 @@ public class Infuser extends BlockContainer {
 
     public void registerIcons(IconRegister par1IconRegister)
     {
-        this.field_94392_b = par1IconRegister.registerIcon("infuser_side");
-        this.field_94459_cP = par1IconRegister.registerIcon(this.isActive ? "infuser_active" : "infuser_active_front");
-        this.field_94459_cA = par1IconRegister.registerIcon(this.isActive ? "infuser_active" : "infuser_active_side");
-        this.field_94392_a = par1IconRegister.registerIcon("infuser_front");
+        this.field_94392_b = par1IconRegister.registerIcon(ModulesCore.blockDir + "infuser_side");
+        this.field_94459_cP = par1IconRegister.registerIcon(this.isActive ? ModulesCore.blockDir + "infuser_active_front":"");
+        this.field_94392_a = par1IconRegister.registerIcon(ModulesCore.blockDir + "infuser_front");
     }
     
   
