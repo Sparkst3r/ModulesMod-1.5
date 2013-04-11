@@ -25,13 +25,13 @@ import net.minecraft.item.ItemStack;
 
 private RefineryRecipes()
 {
-         this.addSmelting(Modules.Dslacky.Core.ModulesCore.ImpureTinIngot.itemID, new ItemStack(Modules.Dslacky.Core.ModulesCore.TinIngot), 0.7F);
-         this.addSmelting(Modules.Dslacky.Core.ModulesCore.ImpureCopperIngot.itemID, new ItemStack(Modules.Dslacky.Core.ModulesCore.CopperIngot), 1.0F);
-         this.addSmelting(Modules.Dslacky.Core.ModulesCore.ImpureLeadIngot.itemID, new ItemStack(Modules.Dslacky.Core.ModulesCore.LeadIngot), 1.0F);
-         this.addSmelting(Modules.Dslacky.Core.ModulesCore.ImpureSilverIngot.itemID, new ItemStack(Modules.Dslacky.Core.ModulesCore.SilverIngot), 1.1F);
-         this.addSmelting(Modules.Dslacky.Core.ModulesCore.ImpureTitaniumIngot.itemID, new ItemStack(Modules.Dslacky.Core.ModulesCore.TitaniumIngot), 1.35F);
-         this.addSmelting(Modules.Dslacky.Core.ModulesCore.UnrefinedElectrodes.itemID, new ItemStack(Modules.Dslacky.Core.ModulesCore.Electrode), 0.7F);
-         this.addSmelting(Modules.Dslacky.Core.ModulesCore.BlockTitanium.blockID, new ItemStack(Modules.Dslacky.Core.ModulesCore.TitaniumIngot, 8), 0.7F);
+         //this.addSmelting(Modules.Dslacky.Core.ModulesCore.ImpureTinIngot.itemID, new ItemStack(Modules.Dslacky.Core.ModulesCore.TinIngot), 0.7F);
+         //this.addSmelting(Modules.Dslacky.Core.ModulesCore.ImpureCopperIngot.itemID, new ItemStack(Modules.Dslacky.Core.ModulesCore.CopperIngot), 1.0F);
+         //this.addSmelting(Modules.Dslacky.Core.ModulesCore.ImpureLeadIngot.itemID, new ItemStack(Modules.Dslacky.Core.ModulesCore.LeadIngot), 1.0F);
+         //this.addSmelting(Modules.Dslacky.Core.ModulesCore.ImpureSilverIngot.itemID, new ItemStack(Modules.Dslacky.Core.ModulesCore.SilverIngot), 1.1F);
+         //this.addSmelting(Modules.Dslacky.Core.ModulesCore.ImpureTitaniumIngot.itemID, new ItemStack(Modules.Dslacky.Core.ModulesCore.TitaniumIngot), 1.35F);
+         //this.addSmelting(Modules.Dslacky.Core.ModulesCore.UnrefinedElectrodes.itemID, new ItemStack(Modules.Dslacky.Core.ModulesCore.Electrode), 0.7F);
+         //this.addSmelting(Modules.Dslacky.Core.ModulesCore.BlockTitanium.blockID, new ItemStack(Modules.Dslacky.Core.ModulesCore.TitaniumIngot, 8), 0.7F);
 
 }
 

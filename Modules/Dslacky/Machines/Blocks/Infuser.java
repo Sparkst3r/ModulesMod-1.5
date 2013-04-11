@@ -17,11 +17,14 @@ import net.minecraft.util.Icon;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
+import Modules.Dslacky.Core.GlobalValues;
+import Modules.Dslacky.Core.GlobalValues;
 import Modules.Dslacky.Core.ModulesCore;
 import Modules.Dslacky.Core.Lib.BlockNames;
 import Modules.Dslacky.Machines.GuiIds;
 import Modules.Dslacky.Machines.ModulesMachinesAddon;
 import Modules.Dslacky.Machines.Render.TileEntityInfuser;
+import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -92,9 +95,9 @@ public class Infuser extends BlockContainer {
 
     public void registerIcons(IconRegister par1IconRegister)
     {
-        this.field_94392_b = par1IconRegister.registerIcon(ModulesCore.blockDir + "infuser_side");
-        this.field_94459_cP = par1IconRegister.registerIcon(this.isActive ? ModulesCore.blockDir + "infuser_active_front":"");
-        this.field_94392_a = par1IconRegister.registerIcon(ModulesCore.blockDir + "infuser_front");
+        this.field_94392_b = par1IconRegister.registerIcon(GlobalValues.blockDir + "infuser_side");
+        this.field_94459_cP = par1IconRegister.registerIcon(this.isActive ? GlobalValues.blockDir + "infuser_active_front":"");
+        this.field_94392_a = par1IconRegister.registerIcon(GlobalValues.blockDir + "infuser_front");
     }
     
   

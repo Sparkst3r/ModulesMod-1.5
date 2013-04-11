@@ -6,6 +6,7 @@ import net.minecraft.util.StatCollector;
 
 import org.lwjgl.opengl.GL11;
 
+import Modules.Dslacky.Core.GlobalValues;
 import Modules.Dslacky.Core.ModulesCore;
 import Modules.Dslacky.Machines.Render.ContainerRefinery;
 import Modules.Dslacky.Machines.Render.TileEntityRefinery;
@@ -28,8 +29,7 @@ protected void drawGuiContainerForegroundLayer(int par1, int par2)
 
 protected void drawGuiContainerBackgroundLayer(float par1, int par2, int par3)
 {
-         //int var4 = this.mc.renderEngine.getTexture("/mods/ModulesCore/textures/gui/Infuser.png");
-         int var4 = this.mc.renderEngine.getTexture(ModulesCore.guiDir + "Refinery.png");
+         this.mc.renderEngine.bindTexture(GlobalValues.guiDir + "Refinery.png");
          GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
          int var5 = (this.width - this.xSize) / 2;
          int var6 = (this.height - this.ySize) / 2;

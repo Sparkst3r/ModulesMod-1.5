@@ -1,5 +1,7 @@
 package Modules.Dslacky.Core.Blocks;
 
+import java.util.Random;
+
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import Modules.Dslacky.Core.ModulesCore;
@@ -20,7 +22,13 @@ public class ElectrodeOre extends Block{
 	}
 	public void registerIcons(IconRegister par1IconRegister)
     {
-        this.blockIcon = par1IconRegister.registerIcon(ModulesCore.blockDir + ":" + this.getUnlocalizedName());
+        this.blockIcon = par1IconRegister.registerIcon(ModulesCore.modid + ":" + this.getUnlocalizedName());
     }
+	
+    public int quantityDropped(Random par1Random)
+    {
+        return 1;
+    }
+    
 
 }

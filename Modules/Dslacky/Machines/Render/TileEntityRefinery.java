@@ -288,10 +288,10 @@ public static int getItemBurnTime(ItemStack par0ItemStack)
                  if (par0ItemStack.getItem() instanceof ItemBlock && Block.blocksList[var1] != null)
 
 
-                	 if (var1 == Modules.Dslacky.Core.ModulesCore.UnrefinedElectrodes.itemID) return 1600;
-                 if (var1 == Modules.Dslacky.Core.ModulesCore.Electrode.itemID) return 2400;
-            	 if (var1 == Modules.Dslacky.Core.ModulesCore.UnrefinedElectrodes.itemID) return 1600;
-            	 if (var1 == Modules.Dslacky.Core.ModulesCore.PowerCell.itemID) return 3000;
+                 if (var1 == Item.coal.itemID) return 1600;
+                // if (var1 == Modules.Dslacky.Core.ModulesCore.Electrode.itemID) return 2400;
+            	 //if (var1 == Modules.Dslacky.Core.ModulesCore.UnrefinedElectrodes.itemID) return 1600;
+            	 //if (var1 == Modules.Dslacky.Core.ModulesCore.PowerCell.itemID) return 3000;
 
                  return GameRegistry.getFuelValue(par0ItemStack);
          }

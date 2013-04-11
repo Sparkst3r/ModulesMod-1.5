@@ -29,7 +29,7 @@ private InfuserRecipes()
          //this.addSmelting(Block.blockSnow.blockID, new ItemStack(Modules.Dslacky.Torchs.ModulesTorchs.InfusedWhiteCoal), 1.0F);
          //this.addSmelting(Block.obsidian.blockID, new ItemStack(Modules.Dslacky.Torchs.ModulesTorchs.InfusedPurpleCoal), 1.0F);
          //this.addSmelting(Item.bucketWater.itemID, new ItemStack(Modules.Dslacky.Torchs.ModulesTorchs.InfusedBlueCoal), 1.0F);
-         this.addSmelting(Modules.Dslacky.Core.ModulesCore.OreElectrode.blockID, new ItemStack(Modules.Dslacky.Core.ModulesCore.UnrefinedElectrodes), 1.0F);
+         //this.addSmelting(Modules.Dslacky.Core.ModulesCore.OreElectrode.blockID, new ItemStack(Modules.Dslacky.Core.ModulesCore.UnrefinedElectrodes), 1.0F);
 
 }
 

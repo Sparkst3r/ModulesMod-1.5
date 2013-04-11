@@ -1,14 +1,14 @@
-package Modules.Dslacky.Core.Items;
+package Modules.Dslacky.World.Items;
 
 
 import java.util.List;
 
+import Modules.Dslacky.Core.GlobalValues;
 import Modules.Dslacky.Core.ModulesCore;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-
 
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
@@ -18,17 +18,17 @@ import net.minecraft.util.Icon;
 
 
 /**
- * Meta-data item for the 4 ingots.
+ * Meta-data item for the 5 ingots.
  * 
  * @author Sparkst3r
  *
  */
-public class ItemImpureIngot extends Item {
+public class ItemIngot extends Item {
 	/** Texture file names + code name */
-    public static String[] types = new String[] {"ImpureIngotCopper", "ImpureIngotTin", "ImpureIngotSilver", "ImpureIngotLead", "ImpureIngotTitanium"};     
+    public static String[] types = new String[] {"ingotCopper", "ingotTin", "ingotSilver", "ingotLead", "ImpureIngotTitanium"};     
     
     /** Human-Readable names */
-    public static String[] names = new String[] {"Impure Copper Ingot", "Impure Tin Ingot", "Impure Silver Ingot", "Impure Lead Ingot", "Impure Titanium Ingot"};
+    public static String[] names = new String[] {"Copper Ingot", "Tin Ingot", "Silver Ingot", "Lead Ingot", "Titanium Ingot"};
     
     /** Icon Array */
     @SideOnly(Side.CLIENT)
@@ -38,14 +38,14 @@ public class ItemImpureIngot extends Item {
      * Constructor
      * @param id Item ID
      */
-	public ItemImpureIngot(int id) {
+	public ItemIngot(int id) {
 		super(id);
-        this.setCreativeTab(CreativeTabs.tabMisc);
+        this.setCreativeTab(ModulesCore.Modules1);
 		this.setHasSubtypes(true);
 		this.setMaxDamage(0);
+		GameRegistry.registerItem(this, "ingots");
 	}
-
-
+	
 	/** Returns the texture based on the damage value */
 	@SideOnly(Side.CLIENT)
     @Override
@@ -58,25 +58,27 @@ public class ItemImpureIngot extends Item {
 	@Override
 	public void updateIcons(IconRegister ir) {
 		iconBuffer = new Icon[types.length];
-
-		String id = ModulesCore.modid + ":";
+		
+		String id = GlobalValues.ModIDCore + ":";
 		iconBuffer[0] = ir.registerIcon(id + types[0]);
 		iconBuffer[1] = ir.registerIcon(id + types[1]);
 		iconBuffer[2] = ir.registerIcon(id + types[2]);	
 		iconBuffer[3] = ir.registerIcon(id + types[3]);
-		iconBuffer[4] = ir.registerIcon(id + types[4]);
+		iconBuffer[3] = ir.registerIcon(id + types[4]);
 	}
     
 	/** Adds the meta items to the tab */
 	@Override
 	public void getSubItems(int id, CreativeTabs tab, List list) {
-		for (int meta = 0; meta < 4; meta++) {
+		for (int meta = 0; meta < 5; meta++) {
 			list.add(new ItemStack(id, 1, meta));
 		}
 	} 
-    
-    public String getItemNameIS(ItemStack stack){
-            return names[stack.getItemDamage()]; // Names is a string[] that will be covered later in this tutorial, if you wan to just return a specific name continue.
-    }
+	
+	/** Returns the unlocalised name of the block*/
+	@Override
+	public String getUnlocalizedName(ItemStack is) {
+		return types[is.getItemDamage()];
+	}
 
 }

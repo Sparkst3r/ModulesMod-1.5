@@ -1,4 +1,4 @@
-package Modules.Dslacky.Core.Extra;
+/*package Modules.Dslacky.Core.Extra;
  
 import java.util.Random;
 
@@ -81,3 +81,4 @@ public class WorldGen implements IWorldGenerator {
 
  
 }
+*/

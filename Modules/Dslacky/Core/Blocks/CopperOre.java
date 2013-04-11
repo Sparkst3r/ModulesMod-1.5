@@ -1,5 +1,6 @@
 package Modules.Dslacky.Core.Blocks;
 
+import cpw.mods.fml.common.registry.LanguageRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import Modules.Dslacky.Core.ModulesCore;

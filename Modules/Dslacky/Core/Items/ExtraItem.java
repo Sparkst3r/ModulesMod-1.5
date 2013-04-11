@@ -79,9 +79,14 @@ public class ExtraItem extends Item {
 	} 
 
 	/** Returns the unlocalised name of the block*/
-	@Override
-	public String getUnlocalizedName(ItemStack is) {
-		return types[is.getItemDamage()];
-	}
+	//@Override
+	//public String getUnlocalizedName(ItemStack is) {
+	//	return names[is.getItemDamage()];
+	//}
+	
+    public String getUnlocalizedName()
+    {
+        return names  + this.getUnlocalizedName();
+    }
 
 }

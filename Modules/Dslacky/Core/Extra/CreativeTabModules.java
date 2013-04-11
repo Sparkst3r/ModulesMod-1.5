@@ -1,6 +1,7 @@
 package Modules.Dslacky.Core.Extra;
 
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
 public class CreativeTabModules extends CreativeTabs {
@@ -11,7 +12,7 @@ public class CreativeTabModules extends CreativeTabs {
 
     @Override
     public ItemStack getIconItemStack() {
-        return new ItemStack(Modules.Dslacky.Core.ModulesCore.PowerCell);
+        return new ItemStack(Item.appleGold);
     }
 
     @Override

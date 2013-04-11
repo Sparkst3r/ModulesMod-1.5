@@ -25,7 +25,7 @@ public class RegisterItems {
 
 
 	public static boolean initialize() {
-		ItemIngotField = new ItemIngot(5000);
+		ItemIngotField = new ItemIngot(5001);
 		ImpureItemIngotField = new ItemImpureIngot(5000);
 
 		addInfoForMeta();
