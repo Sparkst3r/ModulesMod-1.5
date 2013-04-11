@@ -1,4 +1,14 @@
 /*
+
+Updates: 
+Diffrent Levels of Torchs
+Level one
+first made torchs burn out after 15 mins 
+Torchs have a fuel level which can be toped up with coal dust 
+can add diffrent colours (13 colours)
+
+Level 2
+
 package Modules.Dslacky.Torchs;
 
 import net.minecraft.block.Block;
